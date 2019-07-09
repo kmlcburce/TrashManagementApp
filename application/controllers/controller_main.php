@@ -28,6 +28,12 @@ class main extends CI_Controller {
 		$this->load->view('client/client_footer');
 	}
 	
+	public function register(){
+		//for beneficiary; we could put this in another controller file
+		$data['title'] = 'Beneficiary SIgn Up';
+
+		$this->bene_model->bene_register();
+	}
 }
 
 ?>
