@@ -27,6 +27,7 @@ class main extends CI_Controller {
 		$this->load->view('client/client_index');
 		$this->load->view('client/client_footer');
 	}
+	
 }
 
 ?>
