@@ -1,5 +1,6 @@
 
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 class main extends CI_Controller {
 
 	/**
@@ -19,7 +20,9 @@ class main extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('client_login');
+		$this->load->view('client/client_header');
+		$this->load->view('client/client_index');
+		$this->load->view('client/client_footer');
 	}
 }
 
