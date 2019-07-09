@@ -18,7 +18,8 @@ class main extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	
-	//hi im francis
+	//hi im sir nico 
+	
 	public function index()
 	{
 		$this->load->view('client_login');
