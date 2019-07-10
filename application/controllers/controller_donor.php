@@ -1,5 +1,4 @@
 <?php
-
 class Controller_donor extends CI_Controller
 {
 		//Register Beneficiary
