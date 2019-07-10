@@ -15,7 +15,6 @@
     		background-color: #00FF00;
     	}
         
-        
     	a.nav-link:hover{
 			color: #f2ba7b;
 		}
