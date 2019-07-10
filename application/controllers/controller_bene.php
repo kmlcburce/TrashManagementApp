@@ -7,7 +7,5 @@
 
 			$this->bene_model->bene_register();
 		}
-
 	}
-
 ?>
