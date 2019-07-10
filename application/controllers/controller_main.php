@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class main extends CI_Controller {
 
 	/**
@@ -18,14 +17,16 @@ class main extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	
-	//hi im sir nico 
-	
+
+	//hi im sir nico
+
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('client/client_header');
+		$this->load->view('client/client_index');
+		$this->load->view('client/client_footer');
 	}
-	
+
 }
 
 ?>

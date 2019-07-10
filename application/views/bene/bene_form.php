@@ -1,4 +1,4 @@
-<h2 class="mb-3 mt-3"><?= echo$title ?> </h2>
+<h2 class="mb-3 mt-3"><?= $title ?> </h2>
 
 <div class="container">
 
