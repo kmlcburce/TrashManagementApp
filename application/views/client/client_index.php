@@ -4,15 +4,15 @@
 		  <ul class="navbar-nav">
 
 		    <li class="nav-item">
-		      <a class="nav-link" href="#">ABOUT</a>
+		      <a class="nav-link" href="<?php echo base_url('Welcome/about')?>">ABOUT</a>
 		    </li> 
 
 		    <li class="nav-item">
-		      <a class="nav-link" href="#">FAQ</a>
+		      <a class="nav-link" href="<?php echo base_url('Welcome/faq')?>">FAQ</a>
 		    </li>
 
 		    <li class="nav-item">
-		      <a class="nav-link" href="#">DONATE</a>
+		      <a class="nav-link" href="<?php echo base_url('Welcome/donate')?>">DONATE</a>
 		    </li>
 
 		  </ul>
