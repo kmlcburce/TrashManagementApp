@@ -1,5 +1,5 @@
 <?php
-class Controller_donor extends CI_Controller
+class controller_donor extends CI_Controller
 {
 		//Register Beneficiary
         public function donor_landed()
