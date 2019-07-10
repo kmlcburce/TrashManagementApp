@@ -24,6 +24,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('client/client_index');
 		$this->load->view('client/client_footer');
 	}
+
 	public function donor()
 	{
 		$this->load->view('donor/donor_header');
