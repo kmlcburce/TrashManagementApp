@@ -39,19 +39,19 @@
 
             			<div class="form-group">
             				<h5>Categories:</h5>
-            				<p> <input type="checkbox" name = "cannedGoods"> Canned Goods x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityCG"></p>
+            				 <p> <input type="checkbox" name = "cannedGoods"> Canned Goods x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityCG"></p>
 
-            				<p><input type="checkbox" name = "Noodles"> Noodles x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityN"></p>
+            				 <p><input type="checkbox" name = "Noodles"> Noodles x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityN"></p>
 
-            				<p><input type="checkbox" name = "Canned Drinks"> Canned Drinks x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityCD"></p>
+            				 <p><input type="checkbox" name = "Canned Drinks"> Canned Drinks x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityCD"></p>
 
-            				<p><input type="checkbox" name = "Milk"> Milk x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityM"></p>
+            				 <p><input type="checkbox" name = "Milk"> Milk x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityM"></p>
 
-            				<p><input type="checkbox" name = "JuicePacks"> Juice Packs x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityJ"></p>
+            				 <p><input type="checkbox" name = "JuicePacks"> Juice Packs x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityJ"></p>
 
-            				<p><input type="checkbox" name = "others"> Others x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityO"></p>
-            			</div>
-            			<br>
+            				 <p><input type="checkbox" name = "others"> Others x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityO"></p>
+            		    	</div>
+						<br>
 
             			<div class="form-group">
             				<h5>Drop-Off Location:</h5>

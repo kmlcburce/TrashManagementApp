@@ -34,6 +34,12 @@ class controller_main extends CI_Controller {
 
 		$this->bene_model->bene_register();
 	}
+	public function donor()
+	{
+		$this->load->view('donor/donor_header');
+		$this->load->view('donor/donor_form');
+		$this->load->view('donor/donor_footer');
+	}
 }
 
 ?>

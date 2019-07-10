@@ -12,13 +12,13 @@
 
     <style>
     	body{
-    		background-color: #00FF00;
+    		background-color: #FFFFFF;
     	}
-        
+
     	a.nav-link:hover{
 			color: #f2ba7b;
 		}
-        
+
 		a.nav-link{
 			color: #f4976c;
 		}
