@@ -27,9 +27,9 @@ class main extends CI_Controller {
 		$this->load->view('client/client_footer');
 	}
 
-<<<<<<< HEAD
 
-=======
+
+
 
 	public function register(){
 		//for beneficiary; we could put this in another controller file
@@ -37,7 +37,7 @@ class main extends CI_Controller {
 
 		$this->bene_model->bene_register();
 	}
->>>>>>> 6760f0369e95ab62636e5f63eb2d0c1e3c4db45d
+
 }
 
 ?>
