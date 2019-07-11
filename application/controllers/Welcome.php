@@ -31,4 +31,5 @@ class Welcome extends CI_Controller {
 		$this->load->view('donor/donor_form');
 		$this->load->view('donor/donor_footer');
 	}
+	public
 }
