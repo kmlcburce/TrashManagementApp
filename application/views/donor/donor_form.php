@@ -28,22 +28,21 @@
         			<h2 style="text-align: center; font-family: 'Abril Fatface', cursive;"> DONATION FORM </h2>
         			<div class="border-bottom"></div>
 
-        			<form>
+        			<form id = "name" name = "name">
             			<div class="form-group">
             				<br>
             				<h5>Name:</h5>
             				<input type="text" class="form-control" placeholder="Enter Name" required>
             			</div>
-
             			<br>
-
-            			<div class="form-group">
+                            
+            			<div class="form-group" method = "post" action = "controller_donor/donor_form">
             				<h5>Categories:</h5>
             				 <p> <input type="checkbox" name = "cannedGoods"> Canned Goods x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityCG"></p>
 
             				 <p><input type="checkbox" name = "Noodles"> Noodles x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityN"></p>
 
-            				 <p><input type="checkbox" name = "Canned Drinks"> Canned Drinks x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityCD"></p>
+            				 <p><input type="checkbox" name = "cannedDrinks"> Canned Drinks x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityCD"></p>
 
             				 <p><input type="checkbox" name = "Milk"> Milk x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityM"></p>
 
@@ -52,6 +51,7 @@
             				 <p><input type="checkbox" name = "others"> Others x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityO"></p>
             		    	</div>
 						<br>
+
 
             			<div class="form-group">
             				<h5>Drop-Off Location:</h5>
