@@ -24,6 +24,7 @@ class controller_donor extends CI_Controller
             $others = $this->input->post('Others');
             $f_city = $this->input->post('f_city');
             
+            
             //Gonna replace this with quantity
             $this->form_validaition->set_rules($cannedGoods, 'cannedGoods', 'required');
             $this->form_validation->set_rules($Noodles, 'Noodles', 'required');
@@ -31,5 +32,8 @@ class controller_donor extends CI_Controller
             $this->form_validation->set_rules($JuicePacks, 'JuicePacks', 'required');
             $this->form_validation->set_rules($others, 'Others', 'required');
             $this->form_validation->set_rules($f_city, 'f_city', 'required');
+
+            
+        
         }
 }
