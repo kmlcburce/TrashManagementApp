@@ -2,13 +2,21 @@
 class controller_donor extends CI_Controller
 {
 		//Register Beneficiary
-        public function donor_landed()
+        public function donor_landed($page = 'donor_index')
         {
+            if ( ! file_exists(APPPATH.'views/donor/'.$page.'.php'))
+            {
+                    // Whoops, we don't have a page for that!
+                    show_404();
+            }
+            
+            $data['title'] = ucfirst($page); // Capitalize the first letter
+
              $this->load->view('donor/donor_header');
              $this->load->view('donor/donor_index');
              $this->load->view('donor/donor_footer');
         }
-
+        
         public function donor_form()
         {
             $this->load->view('donor/donor_header');
@@ -24,16 +32,12 @@ class controller_donor extends CI_Controller
             $others = $this->input->post('Others');
             $f_city = $this->input->post('f_city');
             
-            
             //Gonna replace this with quantity
-            $this->form_validaition->set_rules($cannedGoods, 'cannedGoods', 'required');
+            $this->form_validation->set_rules($cannedGoods, 'cannedGoods', 'required');
             $this->form_validation->set_rules($Noodles, 'Noodles', 'required');
             $this->form_validation->set_rules($cannedDrinks, 'cannedDrinks', 'required');
             $this->form_validation->set_rules($JuicePacks, 'JuicePacks', 'required');
             $this->form_validation->set_rules($others, 'Others', 'required');
             $this->form_validation->set_rules($f_city, 'f_city', 'required');
-
-            
-        
         }
 }
