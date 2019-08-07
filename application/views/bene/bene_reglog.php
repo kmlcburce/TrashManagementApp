@@ -56,7 +56,7 @@
             color: #655650;
         }
         .jumbotron{
-            background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<?php echo base_url('images/download.jpg'); ?>);
+            background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<?php //echo base_url('images/download.jpg'); ?>);
             background-position: center;
             height: 50vh;
         }
