@@ -145,7 +145,7 @@
                 <h2 style="text-align: center;"> DONOR SIGN UP FORM </h2>
                     <div class="border-bottom"></div>
 
-                        <form method="POST" action="<?php echo site_url('controller_donor/createDonor'); ?>">
+                        <form method="POST" action="<?php echo site_url('controller_don/createDonor'); ?>">
                             <div class="form-group">
                                 <br>
                                 <h5>Email:</h5>
