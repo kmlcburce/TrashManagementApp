@@ -16,7 +16,7 @@ class controller_donor extends CI_Controller {
 
 	public function createDonor()
 	{
-		$this->model_donor->crDonor();
+		$this->donor_model->crDonor();
 
 		redirect("controller_donor");
 	} 

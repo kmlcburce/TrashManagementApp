@@ -16,7 +16,7 @@ class controller_beneficiary extends CI_Controller {
 
 	public function createBeneficiary()
 	{
-		$this->model_beneficiary->crBeneficiary();
+		$this->bene_model->crBeneficiary();
 
 		redirect("controller_beneficiary");
 	} 
