@@ -9,7 +9,6 @@
 	E-mail: <input type="text" name="email"><br>
 <button type="submit"></button>
 </form>
-
 <table class="table table-bordered">
 	<thead class="table-info">
 		<tr>
@@ -32,9 +31,6 @@
 		</tr>
 	<?php endforeach; ?>
 	</tbody>
-
 </table>
-
-
 <?php echo form_close() ?>
 </div>

@@ -9,7 +9,7 @@
 			$this->load->view('bene/bene_index', $data);
 			$this->load->view('bene/bene_footer');
 		}
-
+		
 		public function register(){
 			$data['title'] = 'Beneficiary SIgn Up';
 

@@ -17,7 +17,6 @@ class controller_main extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-
 	//hi im sir nico
 
 	public function index()
@@ -33,7 +32,7 @@ class controller_main extends CI_Controller {
 
 		$this->bene_model->bene_register();
 	}
-	
+		
 	public function donor()
 	{
 		$this->load->view('donor/donor_header');
@@ -41,5 +40,4 @@ class controller_main extends CI_Controller {
 		$this->load->view('donor/donor_footer');
 	}
 }
-
 ?>
