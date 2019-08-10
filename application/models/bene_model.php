@@ -14,14 +14,35 @@
 
 		}
 
-		public function bene_register()
+	public function crBeneficiary()
+	{
+		$data = array(
+
+			'b_org'			=> $this->input->post('orgB')
+			'b_email'		=> $this->input->post('emailB'),
+			'b_username' 	=> $this->input->post('usernameB'),
+			'b_password' 	=> $this->input->post('passwordB')
+
+		);
+
+		$this->db->insert('beneficiary', $data);
+	}
+
+	function can_login($username, $password)
+	{
+		$this->db->where('username',$username);
+		$this->db->where('password',$password);
+		$query = $this ->db->get('beneficiary_accounts');
+
+		if($query -> num_rows() > 0)
 		{
-			$data = array(
-				'name' => $this->input->post('name'),
-				'email' => $this->input->post('email')
-			);
-			$this->db->insert('user_accounts', $data);
+			return true;
 		}
+		else
+		{
+			return false;
+		}
+	}
 	}
 
 ?>
