@@ -170,27 +170,33 @@
             </div>
             
             <div class="card border-0">
-              <div class="card-body" style="background-color: #b69b90; color:white">
-                <h2 style="text-align: center;"> DONOR LOGIN </h2>
-                        <div class="border-bottom"></div>
+                <div class="card-body" style="background-color: #b69b90; color:white">
+                    <h2 style="text-align: center;"> DONOR LOGIN </h2>
+                    <div class="border-bottom"></div>
 
-                        <form>
+                    <form method="POST" action="<?php echo base_url(); ?>controller_donor/login_validation">
                         <div class="form-group">
                             <br>
                             <h5>Username:</h5>
-                            <input type="text" class="form-control" placeholder="Enter Name" required>
+                            <input type="text" name="username" class="form-control" placeholder="Enter Username" required>
+                            <span class="text-danger"><?php echo form_error('username'); ?></span>
                         </div>
 
                         <div class="form-group">
                             <h5>Password:</h5>
-                            <input type="password" class="form-control" placeholder="Enter Password" required>
+                            <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
+                            <span class="text-danger"><?php echo form_error('password'); ?></span>
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn" style="background-color: #837772; color:white">Log In</button>
+                            <input type="submit" name="insert" value="Login" class="btn" style="background-color: #837772; color:white">
+                            <!-- <button type="submit" class="btn" style="background-color: #837772; color:white">Log In</button> -->
+                             <?php
+                                echo $this->session->flashdata("error");
+                             ?>
                         </div>
                     </form>
-              </div>
+                </div>
             </div>
           </div>
         </div>
