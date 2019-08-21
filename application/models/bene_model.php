@@ -1,5 +1,5 @@
 <?php
-	class Bene_model extends CI_Model
+	class bene_model extends CI_Model
 	{
 		public function __construct()
 		{
@@ -10,15 +10,14 @@
 			//use slugs if you're displaying an individual item in a whole page
 			//if $slug = FALSE and etc.
 			$query = $this->db->get('item_list');
-			return $query->result_array();
-
+			return $query;
 		}
 
 	public function crBeneficiary()
 	{
 		$data = array(
 
-			'b_org'			=> $this->input->post('orgB')
+			'b_org'			=> $this->input->post('orgB'),
 			'b_email'		=> $this->input->post('emailB'),
 			'b_username' 	=> $this->input->post('usernameB'),
 			'b_password' 	=> $this->input->post('passwordB')
