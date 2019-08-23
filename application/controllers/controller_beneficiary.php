@@ -11,7 +11,9 @@ class controller_beneficiary extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('bene_reglog');
+		$this->load->view('/bene/bene_header');
+		$this->load->view('/bene/bene_reglog');
+		$this->load->view('/bene/bene_footer');
 	}
 
 	public function createBeneficiary()
