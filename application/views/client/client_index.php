@@ -131,7 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    </li>
 
 		    <li class="nav-item">
-		      <a class="nav-link" href="<?php echo base_url('controller_beneficiary/index');?>">BE A BENEFACTOR</a>
+		      <a class="nav-link" href="<?php echo base_url('bene/index');?>">BE A BENEFACTOR</a>
 		    </li>
 
 		  </ul>
