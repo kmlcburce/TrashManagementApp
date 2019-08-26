@@ -58,3 +58,4 @@ $route['beneReg'] = 'controller_bene/register';
 $route[''] = 'controller_donor/donor_landed';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+

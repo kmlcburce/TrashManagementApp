@@ -81,3 +81,4 @@ class controller_beneficiary extends CI_Controller {
 		redirect(base_url() . 'controller_beneficiary/login');
 	}
 }
+}
