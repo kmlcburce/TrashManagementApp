@@ -115,7 +115,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		  <ul class="navbar-nav">
 
 		  	<li class="nav-item">
-		      <a class="nav-link" href="#">HOME</a>
+		      <a class="nav-link" href="<?php echo base_url('')?>">HOME</a>
 		    </li> 
 
 		    <li class="nav-item">
@@ -131,7 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    </li>
 
 		    <li class="nav-item">
-		      <a class="nav-link" href="#">BE A BENEFACTOR</a>
+		      <a class="nav-link" href="<?php echo base_url('bene/index');?>">BE A BENEFACTOR</a>
 		    </li>
 
 		  </ul>

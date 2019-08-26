@@ -25,19 +25,5 @@ class controller_main extends CI_Controller {
 		$this->load->view('client/client_index');
 		$this->load->view('client/client_footer');
 	}
-	
-	public function register(){
-		//for beneficiary; we could put this in another controller file
-		$data['title'] = 'Beneficiary SIgn Up';
-
-		$this->bene_model->bene_register();
-	}
-		
-	public function donor()
-	{
-		$this->load->view('donor/donor_header');
-		$this->load->view('donor/donor_form');
-		$this->load->view('donor/donor_footer');
-	}
 }
 ?>

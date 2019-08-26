@@ -3,15 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class controller_beneficiary extends CI_Controller {
 
-	public function __construct
+	public function __construct()
 	{
 		parent:: __construct();
-		$this->load->model('model_beneficiary');
+		$this->load->model('bene_model');
 	}
 
 	public function index()
 	{
-		$this->load->view('bene_reglog');
+		$this->load->view('/bene/bene_header');
+		$this->load->view('/bene/bene_reglog');
+		$this->load->view('/bene/bene_footer');
 	}
 
 	public function createBeneficiary()

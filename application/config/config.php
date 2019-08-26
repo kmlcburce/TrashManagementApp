@@ -24,6 +24,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/sia2/';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 002ad3ba0acde2713646f6b053e0644b868c7dc0
 /*
 |--------------------------------------------------------------------------
 | Index File
