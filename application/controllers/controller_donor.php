@@ -15,7 +15,7 @@ class controller_donor extends CI_Controller
              $this->load->view('donor/donor_index');
              $this->load->view('donor/donor_footer');
       }
-       
+   
       public function donor_form()
       {
           //increment the user_id

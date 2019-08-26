@@ -7,14 +7,14 @@
         <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
     </head>
-
+    
     <body>
       <nav class="navbar navbar-expand-sm" style="background-color: #fbe8a6; font-size: 18px;letter-spacing: 1px">
 		  	<ul class="navbar-nav">
 			    <li class="nav-item">
 			      <a class="nav-link" href="#">ABOUT</a>
-			    </li> 
-
+			    </li>
+           
 			    <li class="nav-item">
 			      <a class="nav-link" href="#">FAQ</a>
 			    </li>
