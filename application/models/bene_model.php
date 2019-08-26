@@ -17,14 +17,15 @@
 	{
 		$data = array(
 
-			'b_org'			=> $this->input->post('orgB'),
-			'b_email'		=> $this->input->post('emailB'),
-			'b_username' 	=> $this->input->post('usernameB'),
-			'b_password' 	=> $this->input->post('passwordB')
+			'u_fname'			=> $this->input->post('fname'),
+			'u_lname'			=> $this->input->post('lname'),
+			'u_email'			=> $this->input->post('email'),
+			'u_password' 		=> $this->input->post('password'),
+			'u_type' 			=> $this->input->post('type')
 
 		);
 
-		$this->db->insert('beneficiary', $data);
+		$this->db->insert('user_table', $data);
 	}
 
 	function can_login($username, $password)

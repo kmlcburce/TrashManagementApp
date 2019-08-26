@@ -53,8 +53,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'controller_main';
 $route['donor'] = 'controller_donor/donor_landed';
 $route['dForm'] = 'controller_donor/donor_form';
-$route['bene'] = 'controller_bene';
+/*	Useless since no fuction -Kyle
+$route['bene'] = 'controller_bene'; 
 $route['beneReg'] = 'controller_bene/register';
+*/
 $route[''] = 'controller_donor/donor_landed';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

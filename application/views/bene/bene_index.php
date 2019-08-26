@@ -140,3 +140,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!------------------------------------------------------------------------------------------------------------------------>
  
+ 	<div class="container">
+ 		<form class="table" action="<?php echo site_url('controller_beneficiary/get_item') ?>">
+ 			<table>
+ 				<thead>
+ 					<tr>
+ 						<th>Item Name</th>
+ 						<th>Category</th>
+ 						<th>Exp. Date</th>
+ 						<th>Quantity available</th>
+ 					</tr>
+ 				</thead>
+ 				<tbody>
+ 					<?php  
+ 					if($get_items->num_rows() > 0) 
+ 						{ foreach($get_items->result() as $row){	
+ 									?>
+ 					<tr>
+ 						<th><input type="checkbox" name="name" value="Bike"> <?php echo $row->il_name; ?><br></th>
+ 						<th><?php echo $row->il_category; ?></th>
+ 						<th><?php echo $row->il_exp_date; ?></th>
+ 						<th><?php echo $row->i_total_quantity; ?></th>
+ 					</tr>
+ 					<?php 
+ 															}
+ 						}
+ 					else{ ?>
+ 					<tr>
+ 						<td colspan="5">No data found</td>
+ 					</tr>
+ 					<?php
+ 						}
+ 					?>
+ 				</tbody>
+ 			</table>
+ 			<input type="submit" value="Submit">
+ 		</form>
+ 		
+ 	</div>

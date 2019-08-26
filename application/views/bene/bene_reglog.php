@@ -57,25 +57,27 @@
                     <form method="POST" action="<?php echo site_url('controller_beneficiary/createBeneficiary') ?>">
                         <div class="form-group">
                             <br>
-                            <h5>Name or Organization:</h5>
-                            <input type="text" name="orgB" class="form-control" placeholder="Enter Name or Organization" required>
+                            <h5>First Name:</h5>
+                            <input type="text" name="fname" class="form-control" placeholder="Enter First Name" required>
                         </div>
 
                         <div class="form-group">
-                            <h5>Email:</h5>
-                            <input type="email" name="emailB" class="form-control" placeholder="Enter Email" required>
+                            <h5>Last Name:</h5>
+                            <input type="text" name="lname" class="form-control" placeholder="Enter Last Name" required>
                         </div>
 
                         <div class="form-group">
-                            <h5>Username:</h5>
-                            <input type="text" name="usernameB" class="form-control" placeholder="Enter Username" required>
+                            <h5>Email::</h5>
+                            <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
                         </div>
-
                         <div class="form-group">
                             <h5>Password:</h5>
-                            <input type="password" name="passwordB" class="form-control" placeholder="Enter Password" required>
+                            <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
                         </div>
-
+                        <div class="form-group">
+                            <h5>Register as:</h5>
+                            <input type="text" name="type" class="form-control" value="Benefactor" disabled>
+                        </div>
 
 
                         <div class="form-group">

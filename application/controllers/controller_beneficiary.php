@@ -15,6 +15,12 @@ class controller_beneficiary extends CI_Controller {
 		$this->load->view('/bene/bene_reglog');
 		$this->load->view('/bene/bene_footer');
 	}
+	public function get_items(){
+		$data["get_items"] = $this->bene_model->get_items();
+		$this->load->view('/bene/bene_header');
+		$this->load->view('/bene/bene_index', $data);
+		$this->load->view('/bene/bene_footer');
+	}
 
 	public function createBeneficiary()
 	{
