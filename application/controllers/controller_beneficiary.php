@@ -32,29 +32,29 @@ class controller_beneficiary extends CI_Controller {
 	function login()
 	{
 		//'http://localhost/wastage/controller_beneficiary/login'
-
-		$this->load->view("/bene/bene_reglog",$data);  
-
+		$this->load->view('/bene/bene_header');
+		$this->load->view("/bene/bene_index");  
+		$this->load->view('/bene/bene_footer');
 	}
 
 	function login_validation()
 	{
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('username','Username','required');
+		$this->form_validation->set_rules('email','Email','required');
 		$this->form_validation->set_rules('password','Password','required');
 
 		if($this->form_validation->run())
 		{
 			//true
-			$username = $this->input->post('username');
+			$email = $this->input->post('email');
 			$password = $this->input->post('password');
 
 			//model function
-			$this->load->model('model_beneficiary');
-			if($this->main_model->can_login($username,$password))
+			$this->load->model('bene_model');
+			if($this->bene_model->can_login($email,$password))
 			{
 				$session_data = array(
-						'username' => $username
+						'email' => $email
 				);
 				$this->session->set_userdata($session_data);
 				redirect(base_url() . 'controller_beneficiary/enter');

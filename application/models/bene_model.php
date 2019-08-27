@@ -15,24 +15,25 @@
 
 	public function crBeneficiary()
 	{
+		$type = beneficiary;
 		$data = array(
 
 			'u_fname'			=> $this->input->post('fname'),
 			'u_lname'			=> $this->input->post('lname'),
 			'u_email'			=> $this->input->post('email'),
 			'u_password' 		=> $this->input->post('password'),
-			'u_type' 			=> $this->input->post('type')
+			'u_type' 			=> $type
 
 		);
 
 		$this->db->insert('user_table', $data);
 	}
 
-	function can_login($username, $password)
+	function can_login($email, $password)
 	{
-		$this->db->where('username',$username);
-		$this->db->where('password',$password);
-		$query = $this ->db->get('beneficiary_accounts');
+		$this->db->where('u_email',$email);
+		$this->db->where('u_password',$password);
+		$query = $this ->db->get('user_table');
 
 		if($query -> num_rows() > 0)
 		{
