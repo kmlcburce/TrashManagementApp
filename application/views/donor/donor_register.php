@@ -31,7 +31,7 @@
             			<br>
             			<div class="form-group">
             				 <h5>Categories:</h5>
-                                              
+                             
                              <p>Username or Email</p> 
             				 <p><input type="text" name = "username"  id = "username"></p>
                              

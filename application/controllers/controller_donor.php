@@ -3,11 +3,21 @@
 class controller_donor extends CI_Controller
 {
       //Register Beneficiary
+
+
     	public function __construct()
     	{
 		    parent:: __construct();
 		    $this->load->model('donor_model');
       }
+      
+      public function index()
+      {
+        $this->load->view('donor/donor_header');
+        $this->load->view('donor/donor_reglog');
+        $this->load->view('donor/donor_footer');
+      } 
+    
       
       public function donor_landed($page = 'donor_index')
       {
@@ -56,6 +66,7 @@ class controller_donor extends CI_Controller
         $this->load->view('donor/donor_footer');
       }
       
+      
       function DonorRegister()
       {
         $this->load->view('donor/donor_header');
@@ -74,8 +85,8 @@ class controller_donor extends CI_Controller
           $username = $this->input->post('username');
           $password = $this->input->post('password');
           //model function
-          $this->load->model('model_donor');
-          if($this->model_donor->can_login($username, $password))
+          $this->load->model('donor_model');
+          if($this->donor_model->can_login($username, $password))
           {
             $session_data = array(
               'username' => $username
@@ -95,7 +106,7 @@ class controller_donor extends CI_Controller
           $this->login();
         }
       }
-
+      
       function enter()
       {
         if($this->session->userdata('username') != '')

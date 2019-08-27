@@ -50,7 +50,7 @@ class controller_beneficiary extends CI_Controller {
 			$password = $this->input->post('password');
 
 			//model function
-			$this->load->model('model_beneficiary');
+			$this->load->model('bene_model');
 			if($this->main_model->can_login($username,$password))
 			{
 				$session_data = array(
@@ -72,7 +72,8 @@ class controller_beneficiary extends CI_Controller {
 		}
 	}
 
-	function enter(){
+	function enter()
+	{
 		if($this->session->userdata('username') != '')
 		{
 			echo '<label><a href="'.base_url().'controller_beneficiary/logout">Logout</a></label>'; //logout link

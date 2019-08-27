@@ -41,17 +41,14 @@
 
             				 <p><input type="checkbox" name = "check[]" name ="JuicePack"id = "check"> Juice Packs x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityJ" name = "checkQuant[]" id = "checkQuant"></p>
 
-            				 <p><input type="checkbox" name = "check[]" name = "Others" id = "check"> Others x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityO" name = "checkQuant[]" id = "checkQuant"></p>
-							
+            				 <p><input type="checkbox" name = "check[]" name = "Others" id = "check"> Others x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityO" name = "checkQuant[]" id = "checkQuant"></p>							
             		    </div>
 						<br>
 						
-            	
             			<div class="form-group">
             				<input type="submit" class="btn btn-info" name = "submit">
             			</div>
     		        </form>
-			
     	        </div>
     	    </div>
     	</div>

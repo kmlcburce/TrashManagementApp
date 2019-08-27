@@ -27,9 +27,9 @@
 		
 		function can_login($username,$password)
 		{
-			$this->db->where('username', $username);
-			$this->db->where('password', $password);
-			$query = $this->db->get('donor_accounts');
+			$this->db->where('u_email', $username);
+			$this->db->where('u_password', $password);
+			$query = $this->db->get('user_table');
 			
 			if($query->num_rows() > 0)
 			{
