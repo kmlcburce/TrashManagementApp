@@ -95,9 +95,9 @@
                     <form method="POST" action="<?php echo base_url(); ?>controller_beneficiary/login_validation">
                     <div class="form-group">
                         <br>
-                        <h5>Username:</h5>
-                        <input type="text" name="username"class="form-control" placeholder="Enter Username" required>
-                        <span class="text-danger"><?php echo form_error('username'); ?></span>
+                        <h5>Email:</h5>
+                        <input type="text" name="email" class="form-control" placeholder="Enter Email" required>
+                        <span class="text-danger"><?php echo form_error('email'); ?></span>
                     </div>
 
                     <div class="form-group">

@@ -173,7 +173,7 @@
                     <div class="form-group">
                         <br>
                         <h5>Username:</h5>
-                        <input type="text" class="form-control" placeholder="Enter Userame" required>
+                        <input type="text" class="form-control" placeholder="Enter Email" required>
                     </div>
 
                     <div class="form-group">
