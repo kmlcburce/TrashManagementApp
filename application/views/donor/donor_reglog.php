@@ -46,26 +46,33 @@
             <p class="lamaoquote">YOU MAKE A DIFFERENCE, WE MAKE IT EASIER</p>
         </div>
     </div>
-
+  
         <div class="container">
           <div class="card-deck">
             <div class="card border-0">
               <div class="card-body" style="background-color: #b69b90; color:white">
                 <h2 style="text-align: center;"> DONOR SIGN UP FORM </h2>
                     <div class="border-bottom"></div>
-
-                        <form method="POST" action="<?php echo site_url('controller_don/createDonor'); ?>">
+                    
+                        <form method="POST" action="<?php echo site_url('controller_donor/createDonor'); ?>">
                             <div class="form-group">
                                 <br>
                                 <h5>Email:</h5>
                                 <input type="email" class="form-control" name="emailD" placeholder="Enter Email" required>
                             </div>
-
+                            
                             <div class="form-group">
-                                <h5>Username:</h5>
-                                <input type="text" class="form-control" name="usernameD" placeholder="Enter Username" required>
+                                <br>
+                                <h5>FirstName:</h5>
+                                <input type="text" class="form-control" name="FirstNameD" placeholder="Enter FirstName" required>
                             </div>
-
+                            
+                            <div class="form-group">
+                                <br>
+                                <h5>LastName:</h5>
+                                <input type="text" class="form-control" name="LastNameD" placeholder="Enter LastName" required>
+                            </div>
+                            
                             <div class="form-group">
                                 <h5>Password:</h5>
                                 <input type="password" class="form-control" name="passwordD" placeholder="Enter Password" required>

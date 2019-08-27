@@ -31,7 +31,7 @@
             			<br>
             			<div class="form-group">
             				<h5>Categories:</h5>
-            				 <p> <input type="checkbox" name = "check" name = "checkCan" id = "check"> Canned Goods x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityCG" name = "checkQuant" id = "checkQuant"></p>
+            				 <p> <input type="checkbox" name = "check[]" name = "checkCan" id = "check"> Canned Goods x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityCG" name = "checkQuant" id = "checkQuant"></p>
 							
             				 <p><input type="checkbox" name = "check[]" name = "Noodles" id = "check"> Noodles x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityN" name = "checkQuant" id = "checkQuant[]"></p>
 

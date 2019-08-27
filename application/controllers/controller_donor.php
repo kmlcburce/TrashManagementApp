@@ -3,8 +3,7 @@
 class controller_donor extends CI_Controller
 {
       //Register Beneficiary
-
-
+      
     	public function __construct()
     	{
 		    parent:: __construct();
@@ -17,7 +16,6 @@ class controller_donor extends CI_Controller
         $this->load->view('donor/donor_reglog');
         $this->load->view('donor/donor_footer');
       } 
-    
       
       public function donor_landed($page = 'donor_index')
       {
@@ -31,7 +29,7 @@ class controller_donor extends CI_Controller
              $this->load->view('donor/donor_index');
              $this->load->view('donor/donor_footer');
       }
-   
+      
       public function donor_form()
       {
           //increment the user_id
@@ -46,17 +44,18 @@ class controller_donor extends CI_Controller
       { 
         $this->donor_model->donorInput();      
       }
-
+      
       public function createDonor()
       {
         $this->donor_model->crDonor();
-
         redirect("controller_donor");
-      } 
-
+      }
+      
       function login()
       {
-        $this->load->view("/donor/donor_reglog", $data); 
+        $this->load->view('donor/donor_header');
+        $this->load->view("/donor/donor_reglog"); 
+        $this->load->view('donor/donor_footer');
       }
       
       function DonorLogin()
@@ -65,7 +64,6 @@ class controller_donor extends CI_Controller
         $this->load->view('donor/donor_login');
         $this->load->view('donor/donor_footer');
       }
-      
       
       function DonorRegister()
       {
@@ -111,14 +109,14 @@ class controller_donor extends CI_Controller
       {
         if($this->session->userdata('username') != '')
         {
-          echo '<label><a href="'.base_url().'controller_beneficiary/logout">Logout</a></label>'; //logout link
+          echo '<label><a href="'.base_url().'controller_donor/logout">Logout</a></label>'; //logout link
         }
         else
         {
           redirect(base_url() . 'controller_donor/login');
         }
       }
-
+      
       function logout()
       {
         $this->session->unset_userdata('username');

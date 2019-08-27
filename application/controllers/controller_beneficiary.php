@@ -32,9 +32,7 @@ class controller_beneficiary extends CI_Controller {
 	function login()
 	{
 		//'http://localhost/wastage/controller_beneficiary/login'
-
-		$this->load->view("/bene/bene_reglog",$data);  
-
+		$this->load->view("/bene/bene_reglog");  
 	}
 
 	function login_validation()

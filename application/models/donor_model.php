@@ -13,16 +13,16 @@
 			 );
 			 $this->db->insert('item_list', $data);
 		 }
-
-
+		 
 	    public function crDonor()
 		{
 			$data = array(
-				'd_email'		=> $this->input->post('emailD'),
-				'd_username' 	=> $this->input->post('usernameD'),
-				'd_password' 	=> $this->input->post('passwordD')
+				'u_email'		=> $this->input->post('emailD'),
+				'u_fname'		=> $this->input->post('FirstNameD'),
+				'u_lname'		=> $this->input->post('LastNameD'),
+				'u_password' 	=> $this->input->post('passwordD')
 			);
-			$this->db->insert('donor', $data);
+			$this->db->insert('user_table', $data);
 		}
 		
 		function can_login($username,$password)
