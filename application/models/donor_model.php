@@ -2,13 +2,19 @@
 
 	class donor_model extends CI_Model
 	{
-		 public function donorInput($il_name, $il_category, $il_exp_date, $i_total_quantity)
+		 public function donorInput()
 		 {
-			$query = "INSERT INTO item_list (il_name, il_category, il_exp_date, i_total_quantity) VALUES ($il_name, $il_category, $il_exp_date, $i_total_quantity)";
-			$quer = $this->db->query($query);
+			 $exp_date = 2019;	 
+			 $data = array(
+				'il_name' => $this->input->post('DName'),
+				'il_category' => $this->input->post('check'),
+				'il_exp_date' =>  $exp_date,
+				'i_total_quantity' => $this->input->post('checkQuant')	
+			 );
+			 $this->db->insert('item_list', $data);
 		 }
-		 
-		/*
+
+
 	    public function crDonor()
 		{
 			$data = array(
@@ -18,6 +24,7 @@
 			);
 			$this->db->insert('donor', $data);
 		}
+		
 		function can_login($username,$password)
 		{
 			$this->db->where('username', $username);
@@ -33,7 +40,6 @@
 			{
 				return false;
 			}
-		}
-		*/		
+		}		
 	}
 ?>

@@ -2,7 +2,13 @@
 
 class controller_donor extends CI_Controller
 {
-		//Register Beneficiary
+      //Register Beneficiary
+    	public function __construct()
+    	{
+		    parent:: __construct();
+		    $this->load->model('donor_model');
+      }
+      
       public function donor_landed($page = 'donor_index')
       {
             if ( ! file_exists(APPPATH.'views/donor/'.$page.'.php'))
@@ -20,24 +26,15 @@ class controller_donor extends CI_Controller
       {
           //increment the user_id
           //loop through the data?
+          $this->load->model('donor_model');
           $this->load->view('donor/donor_header');
           $this->load->view('donor/donor_form');
           $this->load->view('donor/donor_footer');
-          
-          $queue = $this->input->post('check');
-          $check = $this->input->post('');
       }
       
       public function donor_input()
-      {
-        if(isset($_POST['check[]']))
-        { 
-            $data = array(
-              'il_name' => $this->input->post('check[]'),
-              'i_total_quantity' => $this->input->post('checkQuant[]')
-            );      
-            $this->donor_model->donorInput();
-        }
+      { 
+        $this->donor_model->donorInput();      
       }
 
       public function createDonor()
@@ -50,6 +47,20 @@ class controller_donor extends CI_Controller
       function login()
       {
         $this->load->view("/donor/donor_reglog", $data); 
+      }
+      
+      function DonorLogin()
+      {
+        $this->load->view('donor/donor_header');
+        $this->load->view('donor/donor_login');
+        $this->load->view('donor/donor_footer');
+      }
+      
+      function DonorRegister()
+      {
+        $this->load->view('donor/donor_header');
+        $this->load->view('donor/donor_register');
+        $this->load->view('donor/donor_footer');
       }
 
       function login_validation()
