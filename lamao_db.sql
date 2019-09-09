@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 23, 2019 at 09:31 AM
--- Server version: 10.1.39-MariaDB
--- PHP Version: 7.1.29
+-- Generation Time: Sep 09, 2019 at 05:43 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `beneficiary_form` (
   `bf_id` int(8) NOT NULL,
   `bf_product_amount` int(8) NOT NULL,
-  `bf_data_ordered` date NOT NULL,
+  `bf_date_ordered` date NOT NULL,
   `u_id` int(8) NOT NULL,
   `in_id` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -45,7 +45,23 @@ CREATE TABLE `beneficiary_form` (
 CREATE TABLE `donor_form` (
   `df_id` int(11) NOT NULL,
   `u_id` int(8) NOT NULL,
-  `in_id` int(8) NOT NULL
+  `in_id` int(8) NOT NULL,
+  `ig_id` int(12) NOT NULL,
+  `df_import_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `item_given`
+--
+
+CREATE TABLE `item_given` (
+  `ig_id` int(12) NOT NULL,
+  `df_id` int(12) NOT NULL,
+  `ig_category` text NOT NULL,
+  `ig_other` text NOT NULL,
+  `ig_quantity` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -82,7 +98,7 @@ INSERT INTO `item_list` (`il_id`, `il_name`, `il_category`, `il_exp_date`, `i_to
 
 CREATE TABLE `item_needed` (
   `in_id` int(8) NOT NULL,
-  `i_id` int(8) NOT NULL,
+  `il_id` int(8) NOT NULL,
   `in_quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -109,7 +125,10 @@ CREATE TABLE `user_table` (
 INSERT INTO `user_table` (`u_id`, `u_fname`, `u_lname`, `u_email`, `u_password`, `u_city`, `u_type`) VALUES
 (1, 'John', 'Doe', 'johnd@gmail.com', '1234', 'Cebu City', 'donor'),
 (2, 'Jane', 'Doe', 'janed@gmail.com', '1234', 'Danao City', 'beneficiary'),
-(3, 'Jonathan', 'Joestar', 'jojo@gmail.com', '1234', 'Talisay City', 'beneficiary');
+(3, 'Jonathan', 'Joestar', 'jojo@gmail.com', '1234', 'Talisay City', 'beneficiary'),
+(4, 'Jonathan', 'Jepstien', 'jojep@gmail.com', '1234', 'Carcar City', 'beneficiary'),
+(5, 'Rick', 'Mundy', 'rickmundy@gmail.com', '4321', 'Carcar City', 'beneficiary'),
+(6, 'Harry', 'Potter', 'harryp@hotmail.com', '4321', 'Carcar City', 'beneficiary');
 
 --
 -- Indexes for dumped tables
@@ -129,7 +148,15 @@ ALTER TABLE `beneficiary_form`
 ALTER TABLE `donor_form`
   ADD PRIMARY KEY (`df_id`),
   ADD UNIQUE KEY `u_id` (`u_id`),
-  ADD UNIQUE KEY `in_id` (`in_id`);
+  ADD UNIQUE KEY `in_id` (`in_id`),
+  ADD UNIQUE KEY `ig_id` (`ig_id`);
+
+--
+-- Indexes for table `item_given`
+--
+ALTER TABLE `item_given`
+  ADD PRIMARY KEY (`ig_id`),
+  ADD UNIQUE KEY `df_id` (`df_id`);
 
 --
 -- Indexes for table `item_list`
@@ -142,7 +169,7 @@ ALTER TABLE `item_list`
 --
 ALTER TABLE `item_needed`
   ADD PRIMARY KEY (`in_id`),
-  ADD UNIQUE KEY `i_id` (`i_id`);
+  ADD UNIQUE KEY `i_id` (`il_id`);
 
 --
 -- Indexes for table `user_table`
@@ -167,6 +194,12 @@ ALTER TABLE `donor_form`
   MODIFY `df_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `item_given`
+--
+ALTER TABLE `item_given`
+  MODIFY `ig_id` int(12) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `item_list`
 --
 ALTER TABLE `item_list`
@@ -182,7 +215,17 @@ ALTER TABLE `item_needed`
 -- AUTO_INCREMENT for table `user_table`
 --
 ALTER TABLE `user_table`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `beneficiary_form`
+--
+ALTER TABLE `beneficiary_form`
+  ADD CONSTRAINT `beneficiary_form_ibfk_1` FOREIGN KEY (`u_id`) REFERENCES `user_table` (`u_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

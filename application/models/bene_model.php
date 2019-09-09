@@ -27,6 +27,7 @@
 		);
 
 		$this->db->insert('user_table', $data);
+		alert('Successfully signed up');
 	}
 
 	function can_login($email, $password)

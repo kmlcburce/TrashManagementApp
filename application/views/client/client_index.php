@@ -131,7 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    </li>
 
 		    <li class="nav-item">
-		      <a class="nav-link" href="<?php echo base_url('bene/index');?>">BE A BENEFACTOR</a>
+		      <a class="nav-link" href="<?php echo site_url('controller_beneficiary/index');?>">BE A BENEFACTOR</a>
 		    </li>
 
 		  </ul>
@@ -180,7 +180,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		      <div class="card-body">
 		        <h4 class="card-title">Be a Benefactor</h4>
 		        <p class="card-text">Interested in being a benefactor? <br> Log in or Sign up at the link below.</p>
-		        <a href="#" class="btn btn-light">Benefactor Sign Up</a>
+		        <a href="<?php echo site_url('controller_beneficiary/index');?>" class="btn btn-light">Benefactor Sign Up</a>
 		      </div>
 		    </div>
 		  </div>
