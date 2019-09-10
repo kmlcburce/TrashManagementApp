@@ -38,11 +38,14 @@ class controller_donor extends CI_Controller
           $this->load->view('donor/donor_header');
           $this->load->view('donor/donor_form');
           $this->load->view('donor/donor_footer');
+             
+          //$this->donor_model->donorInput();
       }
       
       public function donor_input()
       { 
-        $this->donor_model->donorInput();      
+        $this->donor_model->donorInput();
+        redirect("controller_donor");      
       }
       
       public function createDonor()

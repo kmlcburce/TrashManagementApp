@@ -1,17 +1,21 @@
 <?php
-
 	class donor_model extends CI_Model
 	{
 		 public function donorInput()
 		 {
-			 $exp_date = 2019;	 
+			 $don_id = $this->input->post('donor_id'); 
+			 $dForm = (int)$don_id;
+			 $quanti = (int)$quant;
+			 $idUnc = $this->session->userdata('u_id'); 
+			 $idInc = $this->session->userdata('in_id');
+			   
 			 $data = array(
-				'il_name' => $this->input->post('DName'),
-				'il_category' => $this->input->post('check'),
-				'il_exp_date' =>  $exp_date,
-				'i_total_quantity' => $this->input->post('checkQuant')	
-			 );
-			 $this->db->insert('item_list', $data);
+				'df_id' => $dForm,
+				'u_id' => (int)$testnum,
+				'in_id' => (int)$idInc
+			);
+			
+			$this->db->insert('donor_form', $data);
 		 }
 		 
 	    public function crDonor()

@@ -36,7 +36,6 @@
             <li class="nav-item">
               <a class="nav-link" href="#">BE A BENEFACTOR</a>
             </li>
-
           </ul>
     </nav>
 
@@ -46,14 +45,12 @@
             <p class="lamaoquote">YOU MAKE A DIFFERENCE, WE MAKE IT EASIER</p>
         </div>
     </div>
-  
         <div class="container">
           <div class="card-deck">
             <div class="card border-0">
               <div class="card-body" style="background-color: #b69b90; color:white">
                 <h2 style="text-align: center;"> DONOR SIGN UP FORM </h2>
                     <div class="border-bottom"></div>
-                    
                         <form method="POST" action="<?php echo site_url('controller_donor/createDonor'); ?>">
                             <div class="form-group">
                                 <br>

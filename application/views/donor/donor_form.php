@@ -26,29 +26,27 @@
              	<div class="card-body">
         			<h2 style="text-align: center; font-family: 'Abril Fatface', cursive;"> DONATION FORM </h2>
         			<div class="border-bottom"></div>
-					
-        			<form method = "post" action = "<?php echo base_url('controller_donor/donor_input'); ?>">
+				 
+        			<form method = "POST" action = "<?php echo base_url('controller_donor/donor_input'); ?>" name = "donor_id">
             			<br>
-            			<div class="form-group">
+            			<div class="form-group" name = "">
             				<h5>Categories:</h5>
-            				 <p> <input type="checkbox" name = "check[]" name = "checkCan" id = "check"> Canned Goods x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityCG" name = "checkQuant" id = "checkQuant"></p>
+            				 <p> <input type="checkbox" name = "check[]" name = "checkCan" id = "check"> Canned Goods x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityCG" name = "checkQuant[]" id = "checkQuant[]"></p>
 							
-            				 <p><input type="checkbox" name = "check[]" name = "Noodles" id = "check"> Noodles x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityN" name = "checkQuant" id = "checkQuant[]"></p>
-
-            				 <p><input type="checkbox" name = "check[]" name = "CannedDrinks" id = "check"> Canned Drinks x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityCD" name = "checkQuant[]" id = "checkQuant"></p>
+            				 <p><input type="checkbox" name = "check[]" name = "Noodles" id = "check"> Noodles x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityN" name = "checkQuant[]" id = "checkQuant[]"></p>
+							 
+            				 <p><input type="checkbox" name = "check[]" name = "CannedDrinks" id = "check"> Canned Drinks x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityCD" name = "checkQuant[]" id = "checkQuant[]"></p>
 
             				 <p><input type="checkbox" name = "check[]" id = "check" name = "Milk"> Milk x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityM" name = "checkQuant[]" id = "checkQuant[]"></p>
-
-            				 <p><input type="checkbox" name = "check[]" name ="JuicePack"id = "check"> Juice Packs x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityJ" name = "checkQuant[]" id = "checkQuant"></p>
-
-            				 <p><input type="checkbox" name = "check[]" name = "Others" id = "check"> Others x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityO" name = "checkQuant[]" id = "checkQuant"></p>							
-            		    </div>
-						<br>
-						
-            			<div class="form-group">
+							 
+            				 <p><input type="checkbox" name = "check[]" name ="JuicePack"id = "check"> Juice Packs x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityJ" name = "checkQuant[]" id = "checkQuant[]"></p>
+							 	 
+            				 <p><input type="checkbox" name = "check[]" name = "Others" id = "check"> Others x <input type="number" placeholder="Qty" min="1" style="width: 50px" name = "f_quantityO" name = "checkQuant[]" id = "checkQuant[]"></p>							
+						 <br>	
             				<input type="submit" class="btn btn-info" name = "submit">
-            			</div>
+					  </div>
     		        </form>
     	        </div>
     	    </div>
     	</div>
+
