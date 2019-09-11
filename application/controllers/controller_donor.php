@@ -2,8 +2,7 @@
 
 class controller_donor extends CI_Controller
 {
-      //Register Beneficiary
-      
+      //Register Beneficiary      
     	public function __construct()
     	{
 		    parent:: __construct();
@@ -61,12 +60,21 @@ class controller_donor extends CI_Controller
         $this->load->view('donor/donor_footer');
       }
       
+      function logout()
+      {
+        $this->session->sess_destroy();
+        //$this->session->unset_userdata('username');
+        redirect(base_url() . 'controller_donor/login');
+        
+      }
+      
       function DonorLogin()
       {
         $this->load->view('donor/donor_header');
         $this->load->view('donor/donor_login');
         $this->load->view('donor/donor_footer');
       }
+
       
       function DonorRegister()
       {
@@ -92,8 +100,9 @@ class controller_donor extends CI_Controller
             $session_data = array(
               'username' => $username
             );
+            
             $this->session->set_userdata($session_data);
-            redirect(base_url() . 'controller_donor/enter');
+            redirect(base_url() . 'controller_donor/donor_landed');
           }
           else
           {
@@ -112,17 +121,15 @@ class controller_donor extends CI_Controller
       {
         if($this->session->userdata('username') != '')
         {
-          echo '<label><a href="'.base_url().'controller_donor/logout">Logout</a></label>'; //logout link
+          echo '<label><a href="'.base_url().'controller_donor/donor_landed">Logout</a></label>'; //logout link
+          
         }
+        
         else
         {
           redirect(base_url() . 'controller_donor/login');
         }
       }
       
-      function logout()
-      {
-        $this->session->unset_userdata('username');
-        redirect(base_url() . 'controller_donor/login');
-      }
+    
 }

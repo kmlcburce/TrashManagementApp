@@ -14,24 +14,23 @@
 			    <li class="nav-item">
 			      <a class="nav-link" href="#">ABOUT</a>
 			    </li>
-           
+                     
 			    <li class="nav-item">
 			      <a class="nav-link" href="#">FAQ</a>
 			    </li>
-
+          
 			    <li class="nav-item">
 			      <a class="nav-link" href="#">DONATE</a>
 			    </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#" style="margin-left: 1500px">LOGOUT</a>
-                </li>
+            
+          <li class = "nav-item">
+              <a class = "nav-link" href = "<?php echo base_url('controller_donor/logout'); ?>">LOGOUT</a>
+          </li>
 			</ul>
+      
 		</nav>
-        
         <div class = "container">
             <h1> Welcome to the donor page! </h1>
-            <small> Donate yourselves! </small>        
         </div>
     </body>
 </html>

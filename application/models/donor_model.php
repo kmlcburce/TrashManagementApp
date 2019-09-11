@@ -8,15 +8,15 @@
 			 $quanti = (int)$quant;
 			 $idUnc = $this->session->userdata('u_id'); 
 			 $idInc = $this->session->userdata('in_id');
-			   
+			
 			 $data = array(
 				'df_id' => $dForm,
 				'u_id' => (int)$testnum,
 				'in_id' => (int)$idInc
 			);
-			
 			$this->db->insert('donor_form', $data);
 		 }
+		 
 		 
 	    public function crDonor()
 		{
