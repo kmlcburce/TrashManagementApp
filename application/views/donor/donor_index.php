@@ -12,22 +12,20 @@
       <nav class="navbar navbar-expand-sm" style="background-color: #fbe8a6; font-size: 18px;letter-spacing: 1px">
 		  	<ul class="navbar-nav">
 			    <li class="nav-item">
-			      <a class="nav-link" href="#">ABOUT</a>
+			      <a class="nav-link" href="<?php echo base_url('controller_donor/about'); ?>">ABOUT</a>
 			    </li>
-                     
+                
 			    <li class="nav-item">
-			      <a class="nav-link" href="#">FAQ</a>
-			    </li>
+			      <a class="nav-link" href="<?php echo base_url('controller_donor/faq'); ?>">FAQ</a>
+			    </li>    
+			    <li class="nav-item">
+			      <a class="nav-link" href="<?php echo base_url('controller_donor/donor_form'); ?>">DONATE</a>
+	        </li>
           
-			    <li class="nav-item">
-			      <a class="nav-link" href="#">DONATE</a>
-			    </li>
-            
           <li class = "nav-item">
               <a class = "nav-link" href = "<?php echo base_url('controller_donor/logout'); ?>">LOGOUT</a>
           </li>
 			</ul>
-      
 		</nav>
         <div class = "container">
             <h1> Welcome to the donor page! </h1>

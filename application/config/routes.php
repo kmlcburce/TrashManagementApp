@@ -53,6 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'controller_main';
 $route['donor'] = 'controller_donor/donor_landed';
 $route['dForm'] = 'controller_donor/donor_form';
+$route['dSucc'] = 'controller_donor/DonorSuccess';
 $route['dRegister'] = 'controller_donor/DonorRegister';
 $route['dLogin'] = 'controller_donor/DonorLogin';
 /*	Useless since no fuction -Kyle

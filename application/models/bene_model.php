@@ -5,7 +5,7 @@
 		{
 			$this->load->database();
 		}
-
+		
 		public function get_items(){
 			//use slugs if you're displaying an individual item in a whole page
 			//if $slug = FALSE and etc.

@@ -29,6 +29,22 @@ class controller_donor extends CI_Controller
              $this->load->view('donor/donor_footer');
       }
       
+
+      public function about()
+      {
+        $this->load->view('donor/donor_header');
+        $this->load->view('about');
+        $this->load->view('donor/donor_footer');
+      }
+      
+
+      public function faq()
+      {
+        $this->load->view('donor/donor_header');
+        $this->load->view('faq');
+        $this->load->view('donor/donor_footer');
+      }
+      
       public function donor_form()
       {
           //increment the user_id
@@ -37,13 +53,14 @@ class controller_donor extends CI_Controller
           $this->load->view('donor/donor_header');
           $this->load->view('donor/donor_form');
           $this->load->view('donor/donor_footer');
-             
+          
           //$this->donor_model->donorInput();
       }
       
       public function donor_input()
       { 
         $this->donor_model->donorInput();
+        //$this->donor_model->donor_submit();
         redirect("controller_donor");      
       }
       
@@ -72,6 +89,13 @@ class controller_donor extends CI_Controller
       {
         $this->load->view('donor/donor_header');
         $this->load->view('donor/donor_login');
+        $this->load->view('donor/donor_footer');
+      }
+
+      function DonorSuccess()
+      {
+        $this->load->view('donor/donor_header');
+        $this->load->view('donor/donor_success');
         $this->load->view('donor/donor_footer');
       }
 
@@ -123,9 +147,7 @@ class controller_donor extends CI_Controller
         {
           echo '<label><a href="'.base_url().'controller_donor/donor_landed">Logout</a></label>'; //logout link
           
-        }
-        
-        else
+        }else
         {
           redirect(base_url() . 'controller_donor/login');
         }
